@@ -8,7 +8,7 @@ The multi-page rebuild follows [Phase 1 — website structure and content](docs/
 
 See the [Phase 10 launch review](docs/phase-10-launch-review.md) for completed checks and items that must be resolved before public launch.
 
-Edit `generate-pages.mjs` for the shared HTML shell; `home.mjs`, `product-pages.mjs`, `demo-page.mjs`, `offer-pages.mjs`, and `info-pages.mjs` hold page content. The shared animated hero is in `hero-visual.mjs` and `dist/hero-visual.css`. Run `npm run build` to regenerate the pages. Shared styles and navigation are in `dist/site.css` and `dist/site.js`; page-specific CSS and scripts are also in `dist/`. Phases 4–8 supply the main pages in English and Bangla. The contact form prepares a message in the visitor's email application; there is no server-side submission or delivery confirmation.
+Edit `generate-pages.mjs` for the shared HTML shell; `home.mjs`, `product-pages.mjs`, `demo-page.mjs`, `offer-pages.mjs`, and `info-pages.mjs` hold page content. The shared animated hero is in `hero-visual.mjs` and `dist/hero-visual.css`; section motion is in `dist/sections-motion.css` and `dist/sections-motion.js`. Run `npm run build` to regenerate the pages. Shared styles and navigation are in `dist/site.css` and `dist/site.js`; page-specific CSS and scripts are also in `dist/`. Phases 4–8 supply the main pages in English and Bangla. The contact form prepares a message in the visitor's email application; there is no server-side submission or delivery confirmation.
 
 ## Run locally
 

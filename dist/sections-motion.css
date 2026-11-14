@@ -1,0 +1,15 @@
+/* Content stays visible when scripting or IntersectionObserver is unavailable. */
+.motion-item{opacity:.55;translate:0 18px;transition:opacity .65s ease,translate .65s cubic-bezier(.2,.7,.2,1)}
+.motion-item.motion-visible,.motion-item:focus-within{opacity:1;translate:0 0}
+.card.motion-item:nth-child(2),.home-steps article.motion-item:nth-child(2),.start-steps article.motion-item:nth-child(2),.offer-card.motion-item:nth-child(3n+2),.demo-card.motion-item:nth-child(even),.info-values article.motion-item:nth-child(2){transition-delay:.08s}
+.card.motion-item:nth-child(3),.home-steps article.motion-item:nth-child(3),.start-steps article.motion-item:nth-child(3),.offer-card.motion-item:nth-child(3n),.info-values article.motion-item:nth-child(3){transition-delay:.16s}
+.home-steps article.motion-item:nth-child(4),.setup-steps article.motion-item:nth-child(4){transition-delay:.2s}
+/* Use independent transform/translate properties so hover and entrance work together. */
+.button,.home-link,.offer-link,.info-link,.next-links a,.extension-card a{transition:background-color .2s ease,color .2s ease,box-shadow .2s ease,transform .2s ease}
+.button:hover{transform:translateY(-2px);box-shadow:0 7px 18px #123e371c}
+.card,.offer-card,.info-values article,.demo-card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,opacity .65s ease,translate .65s cubic-bezier(.2,.7,.2,1)}
+@media(hover:hover){.card:hover,.offer-card:hover,.info-values article:hover,.demo-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px #244e3012;border-color:#bfd6be}}
+.home-steps article span,.start-steps article span,.setup-steps article span,.product-number,.info-values article span{display:inline-block;transition:color .2s ease,transform .2s ease}
+@media(hover:hover){.home-steps article:hover span,.start-steps article:hover span,.setup-steps article:hover span,.product-item:hover .product-number,.info-values article:hover span{color:#087b65;transform:translateX(3px)}}
+.faq-group summary span,.demo-expand summary span{transition:transform .2s ease}
+@media(prefers-reduced-motion:reduce){.motion-item,.motion-item.motion-visible{opacity:1;translate:none;transition:none}.button,.card,.offer-card,.info-values article,.demo-card,.home-link,.offer-link,.info-link,.next-links a,.extension-card a,.home-steps article span,.start-steps article span,.setup-steps article span,.product-number,.faq-group summary span,.demo-expand summary span{transition:none!important}.button:hover,.card:hover,.offer-card:hover,.info-values article:hover,.demo-card:hover{transform:none}}
