@@ -57,6 +57,8 @@ The tracked `.openai/hosting.json` identifies the Sites project and declares the
 
 The page generator adds canonical URLs, English/Bangla alternate links, social metadata, `sitemap.xml`, and `robots.txt`. It defaults to the current Sites origin. Before deploying to a custom domain, set the `SITE_ORIGIN` environment variable to the public HTTPS origin (without a path), run `npm run build`, and deploy the regenerated output. Preview-only `/legacy/` and `/design-preview/` routes are excluded from the sitemap and search indexing.
 
+To add or update an Add-Ons card, edit the `extensions` list in `offer-pages.mjs`: provide the English and Bangla name and description and select `paid` or `later`, then rebuild. Confirm availability and pricing before changing planned labels.
+
 New Sites hosting is **private by default**. A marketing site must have its audience explicitly changed to public before prospective customers can visit it without owner access. Do not change sharing simply to make a deployment pass.
 
 Before customer launch, confirm current software availability, installation/hosting/support terms, contact details, and the intended public audience. The free core does not imply free hosting or support, and optional extensions should be labeled according to their actual availability.

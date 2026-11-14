@@ -18,3 +18,21 @@
 html[lang=bn] h1{font-size:clamp(32px,3.4vw,48px);line-height:1.38}
 html[lang=bn] h2{font-size:clamp(26px,2.7vw,37px);line-height:1.4}
 @media(max-width:600px){html[lang=bn] h1{font-size:clamp(29px,7.5vw,36px)}html[lang=bn] h2{font-size:clamp(24px,6.5vw,30px)}}
+
+/* Collapse the longer navigation before it crowds the brand on tablets. */
+@media(min-width:901px) and (max-width:1050px){
+  .bar{height:auto;min-height:72px;flex-wrap:wrap;justify-content:space-between}
+  .bar nav{display:flex;position:static;box-shadow:none;padding:12px 0;flex-basis:100%;margin:0;align-items:stretch;flex-direction:column;gap:0;font-size:14px}
+  .bar nav>a,.bar nav summary{padding:12px}
+  .bar .mobile-toggle{display:none}
+  .js .bar{height:72px;flex-wrap:nowrap}
+  .js .bar .mobile-toggle{display:block}
+  .js .bar nav{display:none;position:absolute;top:72px;left:0;right:0;padding:20px;background:white;box-shadow:0 15px 25px #123e3715;max-height:calc(100vh - 105px);overflow:auto}
+  .js .bar nav.open{display:flex}
+  .bar nav details > summary{justify-content:space-between;gap:12px;padding:12px}
+  .bar nav details > summary::after{width:8px;height:8px;margin-right:4px}
+  .bar nav .dropdown{position:static;min-width:0;padding:5px;margin:0 0 6px;background:#f3f8f1;border:1px solid #e4eee2;box-shadow:none}
+  .bar nav .dropdown a{padding:11px 14px}
+  .nav-cta{margin-top:10px}
+}
+@media(max-width:900px){.js .bar nav{max-height:calc(100vh - 105px);overflow:auto}}
