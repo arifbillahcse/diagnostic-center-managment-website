@@ -2,6 +2,10 @@
 
 A responsive marketing website for the free diagnostic center pathology and billing core. This is the customer information website, separate from the diagnostic center application.
 
+## Multi-page rebuild plan
+
+The current implementation is the initial one-page version. The requested multi-page rebuild begins with [Phase 1 — website structure and content](docs/phase-01-website-plan.md), defining 12 main pages, navigation, bilingual routes, content briefs, customer journeys, and launch inputs. [Phase 2 — design system](docs/phase-02-design-system.md) documents the visual direction, with a [standalone design preview](dist/design-preview/index.html). Multi-page implementation follows in Phase 3.
+
 ## Run locally
 
 Requires Node.js 20 or newer. There are no package dependencies to install.
