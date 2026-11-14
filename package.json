@@ -7,7 +7,8 @@
   "scripts": {
     "build": "node generate-pages.mjs",
     "start": "node server.mjs",
-    "check": "node check.mjs"
+    "check": "node check.mjs",
+    "check:launch": "node launch-check.mjs"
   },
   "engines": {
     "node": ">=20"

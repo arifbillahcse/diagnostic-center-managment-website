@@ -6,6 +6,8 @@ A responsive marketing website for the free diagnostic center pathology and bill
 
 The multi-page rebuild follows [Phase 1 — website structure and content](docs/phase-01-website-plan.md) and the [Phase 2 design system](docs/phase-02-design-system.md). Phase 3 provides 12 English and 12 Bangla routes with shared navigation, mobile menus, page-preserving language switching, and a shared footer. The page introductions are foundation content; the detailed page work follows in later phases. The prior single-page version is retained at `/legacy/`, and the design preview at `/design-preview/`.
 
+See the [Phase 10 launch review](docs/phase-10-launch-review.md) for completed checks and items that must be resolved before public launch.
+
 Edit `generate-pages.mjs` for the shared HTML shell; `home.mjs`, `product-pages.mjs`, `demo-page.mjs`, `offer-pages.mjs`, and `info-pages.mjs` hold page content. Run `npm run build` to regenerate the pages. Shared styles and navigation are in `dist/site.css` and `dist/site.js`; page-specific CSS and scripts are also in `dist/`. Phases 4–8 supply the main pages in English and Bangla. The contact form prepares a message in the visitor's email application; there is no server-side submission or delivery confirmation.
 
 ## Run locally
@@ -20,9 +22,10 @@ Open <http://127.0.0.1:4173>. Set `PORT` to use another port. The preview server
 
 ```sh
 npm run check
+npm run check:launch
 ```
 
-The check verifies page metadata, local assets, anchor targets, and JavaScript syntax. It does not replace browser checks for layout, accessibility, or customer interactions.
+The checks verify page metadata, local assets, anchor targets, JavaScript syntax, all 24 bilingual routes, language links, demo anchors, contact destinations, sitemap, HTTP error handling, and inquiry email-draft logic. They do not replace browser checks for layout, accessibility, mail-app handoff, or real customer interactions.
 
 ## Website content
 
