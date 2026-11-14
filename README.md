@@ -59,6 +59,8 @@ The page generator adds canonical URLs, English/Bangla alternate links, social m
 
 To add or update an Add-Ons card, edit the `extensions` list in `offer-pages.mjs`: provide the English and Bangla name and description and select `paid` or `later`, then rebuild. Confirm availability and pricing before changing planned labels.
 
+Pricing content and the software repository link are maintained in `pricing-page.mjs`. The Download button opens the owner's GitHub source repository, which is under development; it is not an installer download.
+
 New Sites hosting is **private by default**. A marketing site must have its audience explicitly changed to public before prospective customers can visit it without owner access. Do not change sharing simply to make a deployment pass.
 
 Before customer launch, confirm current software availability, installation/hosting/support terms, contact details, and the intended public audience. The free core does not imply free hosting or support, and optional extensions should be labeled according to their actual availability.

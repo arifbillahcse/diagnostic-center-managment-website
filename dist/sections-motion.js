@@ -12,7 +12,8 @@
     '.offer-card', '.offer-split > div', '.setup-steps article', '.checklist-layout > div',
     '.checklist-card', '.offer-next > *', '.info-values article', '.faq-group',
     '.contact-grid > div', '.contact-inner > div', '.footer > div',
-    '.solution-card', '.solution-feature-inner > div', '.solution-steps article'
+    '.solution-card', '.solution-feature-inner > div', '.solution-steps article',
+    '.pricing-heading > div', '.pricing-section-title', '.pricing-plan', '.pricing-included > *'
   ].join(',');
   const items = [...document.querySelectorAll(selector)];
   const observer = new IntersectionObserver(entries => {
