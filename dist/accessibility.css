@@ -13,3 +13,8 @@
 .bar nav .dropdown a[aria-current=page]{background:#e8f3e8;color:var(--green)}
 @media(max-width:900px){.bar nav details > summary{justify-content:space-between;gap:12px;padding:12px}.bar nav details > summary::after{width:8px;height:8px;margin-right:4px}.bar nav .dropdown{position:static;min-width:0;padding:5px;margin:0 0 6px;background:#f3f8f1;border:1px solid #e4eee2;box-shadow:none}.bar nav .dropdown a{padding:11px 14px}}
 @media(prefers-reduced-motion:reduce){.bar nav details > summary,.bar nav details > summary::after,.bar nav .dropdown a{transition:none}}
+
+/* Bengali glyphs occupy more visual space; keep headings balanced at each width. */
+html[lang=bn] h1{font-size:clamp(32px,3.4vw,48px);line-height:1.38}
+html[lang=bn] h2{font-size:clamp(26px,2.7vw,37px);line-height:1.4}
+@media(max-width:600px){html[lang=bn] h1{font-size:clamp(29px,7.5vw,36px)}html[lang=bn] h2{font-size:clamp(24px,6.5vw,30px)}}
