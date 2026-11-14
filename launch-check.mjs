@@ -35,6 +35,11 @@ try {
     assert.ok(res.body.includes(`href="${other}"`), `language switch: ${page}`);
     assert.ok(res.body.includes('tel:+8801779440297') && res.body.includes('mailto:emran.alarif8@gmail.com') && res.body.includes('https://wa.me/8801779440297'), `contact: ${page}`);
     assert.equal((res.body.match(/<h1\b/g)||[]).length, 1, `main heading: ${page}`);
+    if (slug) {
+      assert.ok(!res.body.includes('<section class="hero">') && res.body.includes('class="page-heading"'), `compact page heading: ${page}`);
+    } else {
+      assert.ok(res.body.includes('<section class="hero">') && res.body.includes('class="hero-art"'), `home hero: ${page}`);
+    }
     assert.ok(res.body.includes('rel="canonical"') && res.body.includes('hreflang="en"') && res.body.includes('hreflang="bn"'), `metadata: ${page}`);
     if (slug === 'contact') assert.ok(res.body.includes('id="inquiry-form"') && res.body.includes('type="submit" disabled'), `safe inquiry fallback: ${page}`);
     if (slug === 'demo') for (const id of ['reception','billing','samples','entry','verification','reports','closing']) assert.ok(res.body.includes(`id="${id}"`), `demo ${id}: ${page}`);
