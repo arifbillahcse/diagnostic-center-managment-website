@@ -1,0 +1,14 @@
+{
+  "name": "hospitalsoftwere-marketing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HospitalSoftwere diagnostic center software marketing website",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node check.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
