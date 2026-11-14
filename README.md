@@ -6,7 +6,7 @@ A responsive marketing website for the free diagnostic center pathology and bill
 
 The multi-page rebuild follows [Phase 1 — website structure and content](docs/phase-01-website-plan.md) and the [Phase 2 design system](docs/phase-02-design-system.md). Phase 3 provides 12 English and 12 Bangla routes with shared navigation, mobile menus, page-preserving language switching, and a shared footer. The page introductions are foundation content; the detailed page work follows in later phases. The prior single-page version is retained at `/legacy/`, and the design preview at `/design-preview/`.
 
-Edit `generate-pages.mjs` to change the generated page content or shared HTML shell, then run `npm run build`. Shared styles and interactive navigation are in `dist/site.css` and `dist/site.js`.
+Edit `generate-pages.mjs` to change the generated page content or shared HTML shell, and `home.mjs` for the home-page sections, then run `npm run build`. Shared styles and interactive navigation are in `dist/site.css` and `dist/site.js`; home-page styling is in `dist/home.css`. Phase 4 supplies the detailed home page in English and Bangla. Other detailed pages follow in later phases.
 
 ## Run locally
 
