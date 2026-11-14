@@ -1,5 +1,6 @@
 const toggle = document.querySelector('.mobile-toggle');
 const navigation = document.querySelector('#navigation');
+document.documentElement.classList.add('js');
 function setMenu(open) {
   navigation.classList.toggle('open', open);
   toggle.setAttribute('aria-expanded', String(open));

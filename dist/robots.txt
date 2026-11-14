@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /legacy/
+Disallow: /design-preview/
+Sitemap: https://diagno-center-software-emran.csearif2002.chatgpt.site/sitemap.xml
