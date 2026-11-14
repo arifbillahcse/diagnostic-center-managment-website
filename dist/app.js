@@ -67,7 +67,8 @@
     priorityBilling: 'বিলিং, পেমেন্ট ও বকেয়া', priorityReports: 'প্যাথলজি ও রিপোর্ট ডেলিভারি', prioritySamples: 'নমুনা ট্র্যাকিং ও লেবেলিং',
     createChecklist: 'আমার সেটআপ চেকলিস্ট তৈরি করুন', checklistReady: 'শুরু করার চেকলিস্ট',
     downloadChecklist: 'চেকলিস্ট ডাউনলোড', checklistNote: 'ইনস্টলেশন আলোচনার জন্য এটি রাখুন। এটি শুধু চেকলিস্ট তৈরি করে; কোনো রিকোয়েস্ট পাঠায় না।',
-    callUs: 'ফোন করুন', whatsappUs: 'হোয়াটসঅ্যাপে কথা বলুন', contactLabel: 'সেটআপ ও সফটওয়্যার সম্পর্কে যোগাযোগ করুন',
+    callUs: 'ফোন: ০১৭৭৯৪৪০২৯৭', whatsappUs: 'হোয়াটসঅ্যাপে কথা বলুন', contactLabel: 'সেটআপ ও সফটওয়্যার সম্পর্কে যোগাযোগ করুন',
+    extensionSms: 'এসএমএস নোটিফিকেশন', extensionPayments: 'অনলাইন পেমেন্ট', extensionAnalyzer: 'অ্যানালাইজার সংযোগ', extensionBranches: 'একাধিক শাখা', extensionPortal: 'রোগীর পোর্টাল',
   };
   let lang = 'en';
   try { if (localStorage.getItem('hospitalsoftwere-language') === 'bn') lang = 'bn'; } catch { /* Browsing without storage is supported. */ }
@@ -145,7 +146,8 @@
     originals.forEach((original, element) => { element.innerHTML = lang === 'bn' && bn[element.dataset.t] ? bn[element.dataset.t] : original; });
     $('#language-toggle span').textContent = lang === 'bn' ? 'English' : 'বাংলা';
     $('#language-toggle').setAttribute('aria-label', lang === 'bn' ? 'Switch to English' : 'Switch to Bangla');
-    $('#menu-toggle').setAttribute('aria-label', lang === 'bn' ? 'নেভিগেশন খুলুন' : 'Open navigation');
+    updateMenuLabel();
+    $('.dialog-close').setAttribute('aria-label', lang === 'bn' ? 'যোগাযোগ ও সেটআপ বন্ধ করুন' : 'Close contact and setup');
     document.title = lang === 'bn' ? 'HospitalSoftwere — ফ্রি ডায়াগনস্টিক সেন্টার সফটওয়্যার' : 'HospitalSoftwere — Free Diagnostic Center Software';
     try { localStorage.setItem('hospitalsoftwere-language', lang); } catch { /* Language switching also works without local storage. */ }
     renderStep(activeStep);
@@ -169,8 +171,9 @@
   });
   const nav = $('#main-nav');
   const menuToggle = $('#menu-toggle');
-  function closeMenu() { nav.classList.remove('open'); menuToggle.setAttribute('aria-expanded', 'false'); }
-  menuToggle.addEventListener('click', () => { const open = nav.classList.toggle('open'); menuToggle.setAttribute('aria-expanded', String(open)); });
+  function updateMenuLabel() { const open = $('#menu-toggle').getAttribute('aria-expanded') === 'true'; $('#menu-toggle').setAttribute('aria-label', lang === 'bn' ? (open ? 'নেভিগেশন বন্ধ করুন' : 'নেভিগেশন খুলুন') : (open ? 'Close navigation' : 'Open navigation')); }
+  function closeMenu() { nav.classList.remove('open'); menuToggle.setAttribute('aria-expanded', 'false'); updateMenuLabel(); }
+  menuToggle.addEventListener('click', () => { const open = nav.classList.toggle('open'); menuToggle.setAttribute('aria-expanded', String(open)); updateMenuLabel(); });
   $$('#main-nav a').forEach((link) => link.addEventListener('click', closeMenu));
   document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
   window.matchMedia('(min-width: 681px)').addEventListener('change', (event) => { if (event.matches) closeMenu(); });
