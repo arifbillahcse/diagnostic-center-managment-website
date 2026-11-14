@@ -8,7 +8,7 @@ The multi-page rebuild follows [Phase 1 — website structure and content](docs/
 
 See the [Phase 10 launch review](docs/phase-10-launch-review.md) for completed checks and items that must be resolved before public launch.
 
-Edit `generate-pages.mjs` for the shared HTML shell; `home.mjs`, `product-pages.mjs`, `demo-page.mjs`, `offer-pages.mjs`, `info-pages.mjs`, and `solutions-page.mjs` hold page content. The shared animated hero is in `hero-visual.mjs` and `dist/hero-visual.css`; section motion is in `dist/sections-motion.css` and `dist/sections-motion.js`. Run `npm run build` to regenerate the pages. Shared styles and navigation are in `dist/site.css` and `dist/site.js`; page-specific CSS and scripts are also in `dist/`. The contact form prepares a message in the visitor's email application; there is no server-side submission or delivery confirmation.
+Edit `generate-pages.mjs` for the shared HTML shell; `home.mjs`, `product-pages.mjs`, `demo-page.mjs`, `offer-pages.mjs`, `info-pages.mjs`, `solutions-page.mjs`, `pharmacy-page.mjs`, and `pricing-page.mjs` hold page content. The shared animated hero is in `hero-visual.mjs` and `dist/hero-visual.css`; section motion is in `dist/sections-motion.css` and `dist/sections-motion.js`. Run `npm run build` to regenerate the pages. Shared styles and navigation are in `dist/site.css` and `dist/site.js`; `dist/polish.css` contains the cross-page visual refinements. The contact form prepares a message in the visitor's email application; there is no server-side submission or delivery confirmation.
 
 ## Run locally
 

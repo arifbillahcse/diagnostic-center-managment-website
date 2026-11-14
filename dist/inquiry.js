@@ -23,7 +23,7 @@ form.addEventListener('submit', event => {
  const lines = [
   `${bn?'বিষয়':'Inquiry'}: ${selectedType}`,
   `${bn?'নাম':'Name'}: ${document.querySelector('#inquiry-name').value.trim()}`,
-  `${bn?'সেন্টার':'Center'}: ${document.querySelector('#inquiry-center').value.trim()}`,
+  `${bn?'প্রতিষ্ঠান':'Organization'}: ${document.querySelector('#inquiry-center').value.trim()}`,
   `${bn?'উত্তরের মাধ্যম':'Reply method'}: ${selectedReply}`,
   `${bn?'যোগাযোগ':'Contact'}: ${(reply.value === 'email' ? email.value : phone.value).trim()}`,
   `${bn?'জেলা':'District'}: ${document.querySelector('#inquiry-district').value.trim() || '—'}`,
