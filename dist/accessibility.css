@@ -1,3 +1,15 @@
 /* Keep navigation available without JavaScript, then enhance it for small screens. */
 @media(max-width:900px){.bar nav{display:flex;position:static;box-shadow:none;padding:12px 0}.bar{height:auto;min-height:72px;flex-wrap:wrap}.bar nav{flex-basis:100%;margin:0}.bar .mobile-toggle{display:none}.js .bar{height:72px;flex-wrap:nowrap}.js .bar nav{display:none;position:absolute;padding:20px;box-shadow:0 15px 25px #123e3715}.js .bar nav.open{display:flex}.js .bar .mobile-toggle{display:block}}
 .eyebrow{color:#356f58}.card>span{color:#3e7657}.card:first-child>span{color:#b9d0c0}.contact-band .eyebrow{color:#b6d8bf}.faq-group summary:focus-visible,.demo-expand summary:focus-visible{outline:3px solid #d88f3b;outline-offset:4px}.faq-group summary{min-height:32px}.faq-index a,.demo-index a,.feature-index a{min-height:40px;display:inline-flex;align-items:center}.check-item{min-height:30px}.contact-methods a,.next-links a{min-height:44px}html[lang=bn] h1,html[lang=bn] h2,html[lang=bn] h3{letter-spacing:0;line-height:1.35}html[lang=bn] .eyebrow{letter-spacing:0}html[lang=bn] p{line-height:1.8}
+
+/* Navigation chevrons are drawn consistently instead of relying on a font glyph. */
+.bar nav details > summary{display:flex;align-items:center;gap:8px;min-height:44px;border-radius:6px;white-space:nowrap;transition:color .18s ease}
+.bar nav details > summary::after{content:"";display:block;flex:none;width:7px;height:7px;margin:0 1px 4px 0;border-right:1.7px solid currentColor;border-bottom:1.7px solid currentColor;transform:rotate(45deg);transition:transform .18s ease,margin .18s ease}
+.bar nav details[open] > summary::after{transform:rotate(225deg);margin-top:5px;margin-bottom:0}
+.bar nav details > summary:hover,.bar nav details[open] > summary{color:var(--green)}
+.bar nav .dropdown{top:calc(100% + 2px);left:-15px;min-width:230px;padding:7px;background:#fff;border:1px solid #e0ebe2;border-radius:10px;box-shadow:0 12px 30px #173e2520}
+.bar nav .dropdown a{border-radius:6px;padding:10px 12px;line-height:1.4;transition:background .18s ease,color .18s ease}
+.bar nav .dropdown a:hover,.bar nav .dropdown a:focus-visible{background:#eef6ee;color:var(--green)}
+.bar nav .dropdown a[aria-current=page]{background:#e8f3e8;color:var(--green)}
+@media(max-width:900px){.bar nav details > summary{justify-content:space-between;gap:12px;padding:12px}.bar nav details > summary::after{width:8px;height:8px;margin-right:4px}.bar nav .dropdown{position:static;min-width:0;padding:5px;margin:0 0 6px;background:#f3f8f1;border:1px solid #e4eee2;box-shadow:none}.bar nav .dropdown a{padding:11px 14px}}
+@media(prefers-reduced-motion:reduce){.bar nav details > summary,.bar nav details > summary::after,.bar nav .dropdown a{transition:none}}
