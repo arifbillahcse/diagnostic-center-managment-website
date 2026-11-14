@@ -9,6 +9,8 @@ const includes = [
  ['Administration','অ্যাডমিন পরিচালনা','Editable permissions, audit history, Bangla and English, and CSV exports.','সম্পাদনাযোগ্য অনুমতি, অডিট ইতিহাস, বাংলা ও ইংরেজি এবং CSV এক্সপোর্ট।']
 ];
 const extensions = [
+ ['AI integration','এআই ইন্টিগ্রেশন','Connect AI capabilities to suitable diagnostic center workflows.','ডায়াগনস্টিক সেন্টারের উপযুক্ত কাজের ধাপে এআই সুবিধা যুক্ত করা।','paid'],
+ ['QR code integration','কিউআর কোড ইন্টিগ্রেশন','Add QR code functionality to supported workflows.','সমর্থিত কাজের ধাপে কিউআর কোড সুবিধা যুক্ত করা।','paid'],
  ['SMS & WhatsApp','এসএমএস ও হোয়াটসঅ্যাপ','Automated messages and notifications.','স্বয়ংক্রিয় মেসেজ ও নোটিফিকেশন।','paid'],
  ['Online payment gateway','অনলাইন পেমেন্ট গেটওয়ে','Integrated online payment processing.','সমন্বিত অনলাইন পেমেন্ট প্রক্রিয়া।','paid'],
  ['Analyzer integration','অ্যানালাইজার সংযোগ','Bring supported machine results into the result workflow.','সমর্থিত মেশিনের ফলাফল রিপোর্টের কার্যপ্রবাহে আনা।','paid'],
