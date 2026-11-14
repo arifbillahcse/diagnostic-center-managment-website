@@ -5,6 +5,7 @@
   "description": "HospitalSoftwere diagnostic center software marketing website",
   "type": "module",
   "scripts": {
+    "build": "node generate-pages.mjs",
     "start": "node server.mjs",
     "check": "node check.mjs"
   },
