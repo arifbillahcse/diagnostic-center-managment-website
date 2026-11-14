@@ -5,7 +5,7 @@ import { createServer } from 'node:net';
 import { readFile } from 'node:fs/promises';
 import { runInNewContext } from 'node:vm';
 
-const slugs = ['', 'diagnostic-center-software', 'pathology-reports', 'billing-accounts', 'features', 'demo', 'free-core', 'extensions', 'getting-started', 'about', 'faq', 'contact'];
+const slugs = ['', 'diagnostic-center-software', 'pathology-reports', 'billing-accounts', 'features', 'demo', 'free-core', 'extensions', 'getting-started', 'about', 'faq', 'contact', 'solutions'];
 const portProbe = createServer();
 await new Promise((resolve, reject) => { portProbe.once('error', reject); portProbe.listen(0, '127.0.0.1', resolve); });
 const port = portProbe.address().port;
@@ -43,7 +43,7 @@ try {
   assert.equal((await get('/%2e%2e/server.mjs')).status,403);
   assert.equal((await get('/', 'POST')).status,405);
   const sitemap = await get('/sitemap.xml');
-  assert.equal((sitemap.body.match(/<url>/g)||[]).length,24);
+  assert.equal((sitemap.body.match(/<url>/g)||[]).length,slugs.length * 2);
   assert.equal((await get('/robots.txt')).status,200);
 
   // Exercise the email draft without launching a mail app or sending information.
@@ -61,5 +61,5 @@ try {
   assert.ok(mockWindow.location.href.startsWith('mailto:emran.alarif8@gmail.com?'));
   assert.ok(decodeURIComponent(mockWindow.location.href).includes('visitor@example.com'));
   assert.match(elements['inquiry-status'].textContent,/Review and send/);
-  console.log('Launch checks passed: 24 bilingual routes, language links, contact destinations, demo anchors, metadata, sitemap, HTTP errors, and inquiry email draft.');
+  console.log(`Launch checks passed: ${slugs.length * 2} bilingual routes, language links, contact destinations, demo anchors, metadata, sitemap, HTTP errors, and inquiry email draft.`);
 } finally { child.kill(); }
