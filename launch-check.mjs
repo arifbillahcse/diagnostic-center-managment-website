@@ -5,7 +5,7 @@ import { createServer } from 'node:net';
 import { readFile } from 'node:fs/promises';
 import { runInNewContext } from 'node:vm';
 
-const slugs = ['', 'diagnostic-center-software', 'pathology-reports', 'billing-accounts', 'features', 'demo', 'free-core', 'extensions', 'getting-started', 'about', 'faq', 'contact', 'solutions'];
+const slugs = ['', 'diagnostic-center-software', 'pathology-reports', 'billing-accounts', 'features', 'demo', 'free-core', 'extensions', 'getting-started', 'about', 'faq', 'contact', 'solutions', 'pharmacy-management'];
 const portProbe = createServer();
 await new Promise((resolve, reject) => { portProbe.once('error', reject); portProbe.listen(0, '127.0.0.1', resolve); });
 const port = portProbe.address().port;

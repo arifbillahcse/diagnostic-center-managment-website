@@ -4,7 +4,7 @@ A responsive marketing website for the free diagnostic center pathology and bill
 
 ## Multi-page rebuild plan
 
-The multi-page rebuild follows [Phase 1 — website structure and content](docs/phase-01-website-plan.md) and the [Phase 2 design system](docs/phase-02-design-system.md). It provides 13 English and 13 Bangla routes with shared navigation, mobile menus, page-preserving language switching, and a shared footer. The Solution page explains healthcare websites, cloud billing, custom software, applications, and AI integration. The prior single-page version is retained at `/legacy/`, and the design preview at `/design-preview/`.
+The multi-page rebuild follows [Phase 1 — website structure and content](docs/phase-01-website-plan.md) and the [Phase 2 design system](docs/phase-02-design-system.md). It provides 14 English and 14 Bangla routes with shared navigation, mobile menus, page-preserving language switching, and a shared footer. The Solution page explains website and app development, cloud billing, custom software, AI integration, and pharmacy management. The prior single-page version is retained at `/legacy/`, and the design preview at `/design-preview/`.
 
 See the [Phase 10 launch review](docs/phase-10-launch-review.md) for completed checks and items that must be resolved before public launch.
 
@@ -25,7 +25,7 @@ npm run check
 npm run check:launch
 ```
 
-The checks verify page metadata, local assets, anchor targets, JavaScript syntax, all 26 bilingual routes, language links, demo anchors, contact destinations, sitemap, HTTP error handling, and inquiry email-draft logic. They do not replace browser checks for layout, accessibility, mail-app handoff, or real customer interactions.
+The checks verify page metadata, local assets, anchor targets, JavaScript syntax, all 28 bilingual routes, language links, demo anchors, contact destinations, sitemap, HTTP error handling, and inquiry email-draft logic. They do not replace browser checks for layout, accessibility, mail-app handoff, or real customer interactions.
 
 ## Website content
 
